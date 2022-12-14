@@ -78,8 +78,8 @@ def inserir_info_agenda(i):
     with con:
         cur = con.cursor()
         query = "INSERT INTO agenda\
-             (evento, data, cidade, estado, local, espaco, tipo, valor, descricao)\
-                  VALUES (?,?,?,?,?,?,?,?,?,?)"
+             (nome_completo, idade, email, usuario_id, evento_id)\
+                  VALUES (?,?,?,?,?)"
         cur.execute(query,i) 
   
 def mostrar_info_agenda():
@@ -97,7 +97,7 @@ def atualizar_info_agenda(i):
 
     with con:
         cur = con.cursor()
-        query = "UPDATE agenda SET evento=?, data=?, cidade=?, estado=?, local=?, espaco=?, tipo=?, valor=?,\
+        query = "UPDATE agenda SET nome_completo=?, idade=?, email=? usuario_id=?, evento_id=?)\
              descricao WHERE id=?"
         cur.execute(query,i)   
 
