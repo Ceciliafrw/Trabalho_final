@@ -571,9 +571,6 @@ class evento():
                 if evento  == '':
                     messagebox.showerror('Erro', 'Nenhum campo não pode ser vario!')
 
-                #elif cpf == cpf:
-                    #messagebox.showerror('Erro', 'CPF é unico por usuário!')
-
                 else:
                     atualizar_info_evento(listaat)
                     messagebox.showerror('Sucesso', "Os dados foram atualizados com sucesso!")
@@ -587,8 +584,7 @@ class evento():
                     tipo = self.e_tipo.delete(0, 'end')
                     valor = self.e_valor.delete(0, 'end')
                     descricao = self.e_descricao.delete(0, 'end')
-                #for widget in mostra_tabela_usuario.winfo_children():
-                    #widget.destroy()
+                
 
                 mostra_tabela_evento()
                     
@@ -607,9 +603,7 @@ class evento():
             deletar_info_evento(valor_id)
             messagebox.showerror('Sucesso', "Os dados foram deletados da tabela com sucesso!")
 
-            #for widget in mostra_tabela_usuario().winfo_children():
-                #widget.destroy()
-                
+                          
             mostra_tabela_evento()
 
         except IndexError:
