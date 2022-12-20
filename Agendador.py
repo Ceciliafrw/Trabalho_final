@@ -3,8 +3,6 @@ from tkinter import *
 from tkinter import font
 from tkinter import ttk
 from tkinter import messagebox
-from tokenize import Double
-from fastapi import background
 import sqlite3 as lite
 from typing_extensions import Self
 from view import *
